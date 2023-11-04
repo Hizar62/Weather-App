@@ -14,3 +14,19 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+
+# API USED
+-  https://openweathermap.org/
+
+# Dependencies USED
+-  http
+-  GeoLocator
+-  GeoCoding
+-  lottie
+-  flutter native splash
+
+# Video Demostaration
+<p align="center">
+    <img src="demo.gif">
+</p>
