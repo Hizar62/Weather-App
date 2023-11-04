@@ -11,7 +11,7 @@ class WeatherScreen extends StatefulWidget {
 
 class _WeatherScreenState extends State<WeatherScreen> {
   // api key
-  final _WeatherServices = WeatherService('0e1bfece6d6c691aa78ab9f3009c68ce');
+  final _WeatherServices = WeatherService('a4e43d4f2bc0faee001890b41974872f');
   Weather? _weather;
 
   // fetch weather
@@ -51,7 +51,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
             Text(_weather?.cityName ?? "Loading City .."),
 
             // Temperatre
-            Text('${_weather?.temperature.round()}C')
+            Text('${_weather?.temperature.round()}°C')
           ],
         ),
       ),
