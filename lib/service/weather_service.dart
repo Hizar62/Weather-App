@@ -1,6 +1,4 @@
 import 'dart:convert';
-import 'dart:js_interop_unsafe';
-import 'dart:js_util';
 
 import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
@@ -9,7 +7,7 @@ import 'package:weatherapp/models/weather_model.dart';
 
 class WeatherService {
   static const BASE_URL =
-      'https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid={0e1bfece6d6c691aa78ab9f3009c68ce}';
+      'https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid={apikey}';
   final String apikey;
 
   WeatherService(this.apikey);
