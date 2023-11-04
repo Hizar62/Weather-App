@@ -39,6 +39,7 @@ dependencies:
   geolocator: ^10.1.0
   geocoding: ^2.1.1
   lottie: ^2.7.0
+  flutter_native_splash: ^2.3.5
 
 dev_dependencies:
   flutter_test:
@@ -53,6 +54,15 @@ dev_dependencies:
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
+
+
+flutter_native_splash:
+  image: assets/weather-app.png
+  color: "#f9f9f9"
+
+
+
+
 
 # The following section is specific to Flutter packages.
 flutter:
