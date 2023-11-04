@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:http/retry.dart';
+import 'package:lottie/lottie.dart';
 import 'package:weatherapp/models/weather_model.dart';
 import 'package:weatherapp/service/weather_service.dart';
 
@@ -29,6 +31,31 @@ class _WeatherScreenState extends State<WeatherScreen> {
   }
 
   // weather animation
+  String getWeatherAnimation(String? mainCondition) {
+    if (mainCondition == null) return 'assets/sunny.json';
+
+    switch (mainCondition.toLowerCase()) {
+      case 'clouds':
+      case 'mist':
+      case 'smoke':
+      case 'haze':
+      case 'dust':
+      case 'fog':
+        return 'assets/cloud.json';
+      case 'rain':
+      case 'drizzle':
+      case 'shower rain':
+        return 'assets/sun&rain.json';
+      case 'thunderstrom':
+        return 'assets/rain.json';
+
+      case 'clear':
+        return 'assets/sun.json';
+
+      default:
+        return 'assets/sun.json';
+    }
+  }
 
   @override
   void initState() {
@@ -50,8 +77,10 @@ class _WeatherScreenState extends State<WeatherScreen> {
             // City
             Text(_weather?.cityName ?? "Loading City .."),
 
+            Lottie.asset(getWeatherAnimation(_weather?.condition ?? "")),
+
             // Temperatre
-            Text('${_weather?.temperature.round()}°C')
+            Text('${_weather?.temperature.round()}°C'),
           ],
         ),
       ),
