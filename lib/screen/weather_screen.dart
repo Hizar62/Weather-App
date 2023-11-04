@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:http/retry.dart';
 import 'package:lottie/lottie.dart';
 import 'package:weatherapp/models/weather_model.dart';
 import 'package:weatherapp/service/weather_service.dart';
@@ -13,7 +12,7 @@ class WeatherScreen extends StatefulWidget {
 
 class _WeatherScreenState extends State<WeatherScreen> {
   // api key
-  final _WeatherServices = WeatherService('a4e43d4f2bc0faee001890b41974872f');
+  final _WeatherServices = WeatherService('API Key');
   Weather? _weather;
 
   // fetch weather
